@@ -25,7 +25,7 @@ Enable Band n75 5G_NSA:
 echo -e 'AT+QNWPREFCFG="nr5g_band",1:3:7:28:38:75:78\r' > /dev/ttyUSB2
 
 Enable Band n75 5G_SA:
-echo -e 'AT+QNWPREFCFG="nsa_nr5g_band",1:3:7:28:38:78\r' > /dev/ttyUSB2
+echo -e 'AT+QNWPREFCFG="nsa_nr5g_band",1:3:7:28:38:75:78\r' > /dev/ttyUSB2
 ```
 
 I was not able to test whether the router also connects to band n75, as it is not yet activated here. Standalone works without any problems.
