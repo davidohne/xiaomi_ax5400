@@ -1,6 +1,6 @@
-## Xiaomi AX5400 CB0401 v1 Collection
+# Xiaomi AX5400 CB0401 v1 Collection
 
-# Unlock 5G Standalone + Band n75
+### Unlock 5G Standalone + Band n75
 
 The router has a Quectel RG520N-EB installed, which was loaded with a customized firmware (RG520NEBDCR01A13M4G_XM).
 Magenta (thank you very much, kind regards) deactivates the n75 band via firmware and additionally all 5G_SA bands.
