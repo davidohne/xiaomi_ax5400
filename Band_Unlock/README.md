@@ -43,8 +43,7 @@ To make the band unlock persistent, I use a mechanism similar to ssh_patch. Sinc
    
 3. Copy file 99-set-5g-bands to: ```/data/custom/hooks/99-set-5g-bands```
    
-4. Make both files executable: ```chmod 755 /data/custom/hooks/
-   99-set-5g-bands /data/etc/crontabs/patches/5g_band_patch.sh```
+4. Make both files executable: ```chmod 755 /data/custom/hooks/99-set-5g-bands /data/etc/crontabs/patches/5g_band_patch.sh```
 5. Add entry to the end of  ```/etc/config/firewall```:
    ```config include 'auto_ssh_patch'
         option type 'script'
