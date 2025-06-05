@@ -37,20 +37,24 @@ I was not able to test whether the router also connects to band n75, as it is no
 Permanent root access must be installed using XMIR-Patcher. If this has not yet been done, there is no need to read any further. 
 To make the band unlock persistent, I use a mechanism similar to ssh_patch. Since it is not enough to unlock the bands only during a reboot, I have linked the unlock mechanism to the activation of the modem network interface. This approach yielded the best results. To do this, two new files must be created and one file must be edited.
 
-1. Copy file 5g_band_patch.sh to: ```/data/etc/crontabs/patches/5g_band_patch.sh```
+1. Copy file 5g_band_patch.sh to: 
+   ```/data/etc/crontabs/patches/5g_band_patch.sh```
    
-2. Create hooks directory: ```mkdir -p /data/custom/hooks/```
+2. Create hooks directory: 
+   ```mkdir -p /data/custom/hooks/```
    
-3. Copy file 99-set-5g-bands to: ```/data/custom/hooks/99-set-5g-bands```
+3. Copy file 99-set-5g-bands to: 
+   ```/data/custom/hooks/99-set-5g-bands```
    
 4. Make both files executable:
     ```
    chmod 755 /data/custom/hooks/99-set-5g-bands /data/etc/crontabs/patches/5g_band_patch.sh
-   
+
    chmod a+x /data/custom/hooks/99-set-5g-bands /data/etc/crontabs/patches/5g_band_patch.sh
    ```
 5. Add entry to the end of  ```/etc/config/firewall```:
-   ```config include 'auto_ssh_patch'
+   ```
+   config include 'auto_ssh_patch'
         option type 'script'
         option path '/etc/crontabs/patches/5g_band_patch.sh'
         option enabled '1'```
