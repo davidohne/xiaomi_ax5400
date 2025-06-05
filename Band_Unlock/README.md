@@ -57,4 +57,5 @@ To make the band unlock persistent, I use a mechanism similar to ssh_patch. Sinc
    config include 'auto_ssh_patch'
         option type 'script'
         option path '/etc/crontabs/patches/5g_band_patch.sh'
-        option enabled '1'```
+        option enabled '1'
+    ```
